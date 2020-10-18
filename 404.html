@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="https://williamh-d.github.io/williamhd/style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="https://williamh-d.github.io/williamhd/">William H-D</a></li>
+				<li class="navitem navleft"><a href="https://williamh-d.github.io/williamhd/projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="https://williamh-d.github.io/williamhd/aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="https://williamh-d.github.io/williamhd/projects.html">Projects</a>
+			<a href="https://williamh-d.github.io/williamhd/aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="error404div">
+			<h1 class="error404text">404 - Requested page not found!</h1>
+			<p class="infopage-text text404">Use this link: <a class="textlink" href="https://williamh-d.github.io/williamhd/">Home</a> or the navbar to return to the site.</p>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>
