@@ -619,3 +619,10 @@ li.toggle-btn{
 	}
 }
 /*--Embedded Unity end--*/
+
+.error404text{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+}
