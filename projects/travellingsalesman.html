@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="../index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="../projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="../aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../projects.html">Projects</a>
+			<a href="../aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<iframe class="travellingsalesman" src="https://editor.p5js.org/ThatHighDefGuy/embed/7m7GPZFv"></iframe>
+			<div class="infopage">
+				<p class="infopage-title">Genetic Algorithm: Travelling Salesman</p>
+				<p class="infopage-date">Started: Mar 2020 | Finished: Mar 2020</p>
+				<div class="infopage-textcontainer">
+					<p class="infopage-text"><p2 class="important-text">How To Use:</p2> <p2 class="important-text">Click</p2> on the window and enter the parameters. <p2 class="important-text">Left-clicking</p2> will reset the algorithm.</p>
+					<p class="infopage-text">The left graph shows the fittest route in a generation, and the right graph shows the best route so far.</p>
+					<p class="infopage-text">The travelling salesman problem is an NP-hard problem in which the objective is to find the shortest round trip route between a set of nodes, often within a network of edges. Rather than using predefined edges, I define an edge as a straight line from node A to node B. </p>
+					<p class="infopage-text">Since the travelling salesman takes exponential time to find a solution, I am approximating a solution the best I can by means of using a genetic algorithm. The theory behind a genetic algorithm is Darwinian evolution where two fit members of a population survive and pass on their genes to their offspring. In the case of the travelling salesman, a member of a population will be a specific route between the nodes, and a fit member will be one whose route length is relatively short when compared to the other members of the population.</p>
+					<p class="infopage-text">Each generation will have its own population (with the initial population being randomly generated) and only the fittest half will be able to produce the offspring in the next generation. To produce the offspring, two parents are chosen from the previous generation, and an ordered subset is taken from parent 1's route, and the remaining nodes are added from parent 2 in the order that they appeared in parent 2's route.</p>
+					<p class="infopage-text">Eventually, the global best route (on the right) will not change after so many generations, and this is where I decide to terminate the genetic algorithm so that it doesn't run for ever.</p>
+					<p class="infopage-text">There are some issues with this, as often, you can visually see that the final route is not optimal. This will be due to the genes (node route) going down a bad evolutionary path towards a local optimal route where the liklihood of random mutations (swapping two nodes in the route) setting it straight decreases. Having a mutation chance that is too low causes the algorithm to end up in a local maxima, but not a global one, resulting in a bad final route, however, having a mutation chance that is too high results in each offspring having essentially a random route, and thus the algorithm cannot converge onto an acceptable route and the algorithm will timeout since a number of generations have past without the global best route changing. A lower number of nodes and a higher population size helps the algorithm find an optimal route.</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="../index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="../projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="../aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../projects.html">Projects</a>
+			<a href="../aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<iframe class="cryogen" frameborder="0" src="https://itch.io/embed-upload/2854215?color=ffffff" width="1000" height="550"><a href="https://willhd.itch.io/cryogen">Play Cryogen on itch.io</a></iframe>
+			<div class="infopage">
+				<p class="infopage-title">Cryogen</p>
+				<p class="infopage-date">Started: Apr 2020 | Finished: Apr 2020</p>
+				<div class="infopage-textcontainer">
+					<p class="infopage-text"><p2 class="important-text">Ludum Dare Link:</p2> <a class="textlink" href="https://ldjam.com/events/ludum-dare/46/cryogen">Cryogen</a></p>
+					<p class="infopage-text"><p2 class="important-text">Controls:</p2> Movement - <p2 class="important-text">WASD</p2>, Shoot - <p2 class="important-text">LMB</p2>, Reload - <p2 class="important-text">R</p2>, Switch Weapon - <p2 class="important-text">Q</p2>, Interact - <p2 class="important-text">E</p2></p>
+					<p class="infopage-text"><p2 class="important-text">Instructions:</p2> Survive the waves of mutant hordes and protect the cryogen chamber by exploring the derelict mansion and placing down turrets to defend yourself!</p>
+					<p class="infopage-text">Cryogen is a short first person shooter/tower defence survival game I made alongside a couple of friends for the 46th Ludum Dare group game jam. The game was made within 72 hours using the Unity game engine and programmed in C#.</p>
+					<p class="infopage-text">The theme for the Ludum Dare 46 game jam was "Keep it alive". With only this theme and a short set of rules, we had 72 hours to brainstorm and produce a user experience that revolved around the theme. Hence we created a shooter game where you not only had to keep yourself alive, but you had to prevent the cryogen chamber from being destroyed by the mutants.</p>
+					<p class="infopage-text">We initially used a GitHub repository to collaborate on the project, however, after an incident that cost us a few hours to resolve, we switched to Unity's built-in collab system.</p>
+					<p class="infopage-text">This project has taught me a lot about working towards a strict deadline and collaborating with other developers to produce a product meeting specific guidelines.</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="projects.html">Projects</a>
+			<a href="aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<div class="photo-container">
+				<img class="photo" src="images/pfp.jpg" alt="">
+			</div>
+			<div class="infopage">
+				<p class="infopage-title">About Me</p>
+				<p class="infopage-date">William Hayter-Dalgliesh</p>
+				<div class="infopage-textcontainer">
+					<p class="infopage-text">Hi, I'm <p2 class="important-text">Will</p2>! I am a student in my second year of studying the <p2 class="important-text">Computer Science Tripos</p2> at the <p2 class="important-text">University of Cambridge</p2>!</p>
+					<p class="infopage-text">My main interests within Computer Science include <p2 class="important-text">software development</p2>, <p2 class="important-text">game design</p2>, <p2 class="important-text">machine learning</p2>, and <p2 class="important-text">artificial intelligence</p2>.</p>
+					<p class="infopage-text">I have long wanted to be a computer scientist and I am very excited to see how the subject will impact the future with ever progressing technology, especially in the field of AI.</p>
+					<p class="infopage-text">I can use many programming languages including Java, C, C++, C#, Python, OCaml, SystemVerilog, HTML, JavaScript, and CSS. My preferred languages are <p2 class="important-text">Python</p2> and <p2 class="important-text">Java</p2>.</p>
+					<p class="infopage-text">I have some work experience in software development from the Summer of 2018, and I hope to gain a lot more over the coming years!</p>
+					<p class="infopage-text">When I'm not working on my course, I enjoy rowing for the Magdalene Boat Club (Yeah Magdalene!), playing casual Eton Fives, taking part in hackathons/game jams, and spending time with my friends.</p>
+					<br>
+					<p class="infopage-text">If you want to know more about me, you can check out <p2><a class="textlink" href="cv-williamhd.pdf">my CV here!</a></p2> as well as <p2><a class="textlink" href="mailto:willhd2000@gmail.com">send me an email!</a></p2></p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="projects.html">Projects</a>
+			<a href="aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<!--Image slideshow start-->
+			<div class="slider">
+				<div class="slides">
+					<!--Radio buttons start-->
+					<input type="radio" name="radio-btn" id="radio1" oninput="setCoolDown(1)">
+					<input type="radio" name="radio-btn" id="radio2" oninput="setCoolDown(2)">
+					<input type="radio" name="radio-btn" id="radio3" oninput="setCoolDown(3)">
+					<input type="radio" name="radio-btn" id="radio4" oninput="setCoolDown(4)">
+					<!--Radio buttons end-->
+					<!--Slide images start-->
+					<div class="slide first">
+						<a href="projects/cryogen.html">
+							<img src="images/cryogen.png" alt="">
+						</a>
+					</div>
+					<div class="slide">
+						<a href="projects/cosmictaxi.html">
+							<img src="images/cosmictaxi.png" alt="">
+						</a>
+					</div>
+					<div class="slide">
+						<a href="projects/obstruction.html">
+							<img src="images/obstruction.png" alt="">
+						</a>
+					</div>
+					<div class="slide">
+						<a href="aboutme.html">
+							<img src="images/pfp.jpg" alt="">
+						</a>
+					</div>
+					<!--Slide images end-->
+					<!--Auto slideshow start-->
+					<div class="navigation-auto">
+						<div class="auto auto-btn1"></div>
+						<div class="auto auto-btn2"></div>
+						<div class="auto auto-btn3"></div>
+						<div class="auto auto-btn4"></div>
+					</div>
+					<!--Auto slideshow end-->
+				</div>
+				<!--Manual navigation start-->
+				<div class="navigation-manual">
+					<label for="radio1" class="manual-btn"></label>
+					<label for="radio2" class="manual-btn"></label>
+					<label for="radio3" class="manual-btn"></label>
+					<label for="radio4" class="manual-btn"></label>
+				</div>
+				<!--Manual navigation end-->
+			</div>
+			<!--Image slideshow end-->
+		</div>
+
+		<!--Manual and automatic slideshow-->
+		<script type="text/javascript">
+			var counter = 2;
+			var cooldownAmount = 2;
+			var cooldown = 0;
+
+			document.getElementById('radio1').checked = true;
+
+			setInterval(function(){
+				if(cooldown > 0) {
+					cooldown--
+				}
+				else{
+					document.getElementById('radio' + counter).checked = true;
+					counter++
+					if(counter > 4) {
+						counter = 1;
+					}
+				}
+			}, 5000);
+
+			function setCoolDown(i) {
+				cooldown = cooldownAmount
+				counter = i;
+			}
+		</script>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>

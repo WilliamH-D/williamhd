@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="../index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="../projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="../aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../projects.html">Projects</a>
+			<a href="../aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<iframe class="impossible" src="https://editor.p5js.org/ThatHighDefGuy/embed/IHKjevQS"></iframe>
+			<div class="infopage">
+				<p class="infopage-title">JavaScript Game</p>
+				<p class="infopage-date">Started: Mar 2020 | Finished: Mar 2020</p>
+				<div class="infopage-textcontainer">
+					<p class="infopage-text"><p2 class="important-text">Controls:</p2> Movement - <p2 class="important-text">WASD</p2> (<p2 class="important-text">Click</p2> on window to start)</p>
+					<p class="infopage-text"><p2 class="important-text">Instructions:</p2> Navigate the square to the circle, avoiding any white walls</p>
+					<p class="infopage-text">This is a short, simple game that I made one evening during an interactive JavaScript talk. The goal is to use the WASD keys to move the white square towards the white circle without touching any of the defined walls. There are currently only three defined levels, and the player has 4 attempts (shown by the three circular life indicators at the bottom of the window) to beat the game.</p>
+					<p class="infopage-text">Level data is defined as a series of 2D arrays defining the positions of objects (3D arrays are used for the obstacle data as each wall needs it's top-left and bottom-right vertices defined).</p>
+					<p class="infopage-text">Determining collisions was very simple and is achieved by iterating through each object in the scene and determining whether the position of the player is within a given range of the goal's centre, or whether the player is within the rectangular confines of a wall.</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>

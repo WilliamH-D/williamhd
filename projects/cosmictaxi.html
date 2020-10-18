@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<!--My style sheet-->
+		<link rel="stylesheet" type="text/css" href="../style.css">
+		<!--Bootstrap-->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<!--Icons-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!--Jquery-->
+	    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<title>William Hayter-Dalgliesh</title>
+	</head>
+
+	<header>
+		<!--Navbar start-->
+		<div>
+			<ul class="horiz-navbar">
+				<li class="home navleft"><a href="../index.html">William H-D</a></li>
+				<li class="navitem navleft"><a href="../projects.html">Projects</a></li>
+				<li class="navitem navleft"><a href="../aboutme.html">About Me</a></li>
+				<li class="navitem contact navright"><a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a></li>
+				<li class="navitem navright"><a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a></li>
+				<li class="navitem navright"><a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a></li>
+				<li class="toggle-btn navright" onclick="toggleNav()"><a class="" href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+			</ul>
+		</div>
+		<!--Navbar end-->
+	</header>
+
+	<body>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="../projects.html">Projects</a>
+			<a href="../aboutme.html">About Me</a>
+			<a href="https://linkedin.com/in/williamhayter-dalgliesh">LinkedIn <i class="fa fa-linkedin"></i></a>
+			<a href="https://github.com/WilliamH-D">GitHub <i class="fa fa-github"></i></a>
+			<a href="mailto:willhd2000@gmail.com">Contact <i class="fa fa-fw fa-envelope"></i></a>
+		</div>
+
+		<div class="contents">
+			<iframe class="cosmic-taxi" frameborder="0" src="https://itch.io/embed-upload/2829146?color=ffffff" width="1100" height="750"><a href="https://willhd.itch.io/cosmic-taxi">Play Cosmic Taxi on itch.io</a></iframe>
+			<div class="infopage">
+				<p class="infopage-title">Cosmic Taxi</p>
+				<p class="infopage-date">Started: Oct 2020 | Finished: Oct 2020</p>
+				<div class="infopage-textcontainer">
+					<p class="infopage-text"><p2 class="important-text">Ludum Dare Link:</p2> <a class="textlink" href="https://ldjam.com/events/ludum-dare/47/cosmic-taxi">Cosmic Taxi</a></p>
+					<p class="infopage-text"><p2 class="important-text">Controls:</p2> Change orbit - <p2 class="important-text"><- -></p2>, Open/close monitor - <p2 class="important-text">R CTRL</p2></p>
+					<p class="infopage-text"><p2 class="important-text">Instructions:</p2> Pick up and deliver your passengers to the correct planets whilst avoiding oncoming taxis and meteors.</p>
+					<p class="infopage-text">Cosmic Taxi was made as a collaboration between myself and several friends and was our entry for the 47th Ludum Dare game jam.</p>
+					<p class="infopage-text">The theme for this jam was "stuck in a loop", therefore we made a game where the object you have control over is confined to only moving between the orbits of planets.</p>
+					<p class="infopage-text">This game was made in under 72 hours, however, we were busy at the time moving back into university accomodation so we spend much less time on it than the previous game jam. Still though, it provided more useful experience in programming in C# and working collaboratively to meet a deadline.</p>
+					<p class="infopage-text">We used the Unity Game Engine and C# to produce this game. The royalty free music used is credited in game.</p>
+					<br>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			var toggle = 0 /* 0=closed, 1=open */
+			function toggleNav() {
+				if(toggle==0) {
+					openNav()
+				}
+				else {
+					closeNav()
+				}
+			}
+
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "100vw";
+				toggle = 1
+			}
+
+			function closeNav() {
+				 document.getElementById("mySidenav").style.width = "0";
+				 toggle = 0
+			}
+		</script>
+	</body>
+
+</html>
