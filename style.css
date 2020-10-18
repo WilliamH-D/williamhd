@@ -611,6 +611,14 @@ li.toggle-btn{
 .cryogen{
 	height: 550px;
 	width: 1000px;
+	/* Firefox */
+	margin-left: -moz-calc(46vw - 500px); /* Left margin is half of the width of the contents container, minus half of the width of the object */
+	/* WebKit */
+	margin-left: -webkit-calc(46vw - 500px);
+	/* Opera */
+	margin-left: -o-calc(46vw - 500px);
+	/* Standard */
+		margin-left: calc(46vw - 500px);
 }
 
 @media (max-width: 1200px) {
