@@ -13,10 +13,10 @@ html, body{
 
 body{
 	background-image: linear-gradient(to bottom right, var(--soft-blue), var(--soft-purple)); /*#8FE1FE, #8F9CFE, #B28FFE*/
-    	overflow:hidden;
-    	position:fixed;
-    	top:0;
-    	bottom: 0;
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    bottom: 0;
 }
 
 .contents{
@@ -35,6 +35,7 @@ body{
 	width: 92vw;
 	margin-top: 90px;
 	margin-left: 4vw;
+	z-index: 0;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	-ms-overflow-style: none;  /* IE and Edge */
@@ -67,6 +68,7 @@ ul.horiz-navbar{
 li.navitem, li.home, li.toggle-btn{
 	padding: 30px;
 	margin-right: 10px;
+	height: 90px;
 }
 
 li.navleft{
@@ -444,6 +446,9 @@ li.toggle-btn{
 
 /* When the screen is below 1000px (medium) */
 @media (max-width: 1000px) {
+	.projectlist{
+		margin-bottom: 10vh;
+	}
 	.projectlistelem{
 		width: 480px;
 		height: 100%;
