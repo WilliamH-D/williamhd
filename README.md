@@ -1,2 +1,2 @@
 # williamhd
-My personal professional website
+My personal website
