@@ -13,10 +13,10 @@ html, body{
 
 body{
 	background-image: linear-gradient(to bottom right, var(--soft-blue), var(--soft-purple)); /*#8FE1FE, #8F9CFE, #B28FFE*/
-    overflow:hidden;
-    position:fixed;
-    top:0;
-    bottom: 0;
+    	overflow:hidden;
+    	position:fixed;
+    	top:0;
+    	bottom: 0;
 }
 
 .contents{
