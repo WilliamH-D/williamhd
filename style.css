@@ -447,7 +447,7 @@ li.toggle-btn{
 /* When the screen is below 1000px (medium) */
 @media (max-width: 1000px) {
 	.projectlist{
-		margin-bottom: 10vh;
+		margin-bottom: 13vh;
 	}
 	.projectlistelem{
 		width: 480px;
