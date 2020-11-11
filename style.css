@@ -13,6 +13,10 @@ html, body{
 
 body{
 	background-image: linear-gradient(to bottom right, var(--soft-blue), var(--soft-purple)); /*#8FE1FE, #8F9CFE, #B28FFE*/
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    bottom: 0;
 }
 
 .contents{
@@ -647,4 +651,14 @@ li.toggle-btn{
 	font-size: 20px;
 	font-weight: bold;
 	font-style: italic;
+}
+
+.wiptext {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: -20px;
 }
