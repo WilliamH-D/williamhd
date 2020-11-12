@@ -3,7 +3,7 @@
 	--soft-purple: #8056FF;
 	--text-hover-navy: #002580;
 	--text-mid-blue: #5F73F7;
-	--text-gray: #A1ACB9;
+	--text-gray: #777c96; /*#A1ACB9; 8b96a3*/
 }
 
 html, body{
@@ -165,7 +165,7 @@ li.toggle-btn{
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 35px;
   color: var(--text-mid-blue);
   display: block;
   transition: 0.3s;
@@ -184,6 +184,12 @@ li.toggle-btn{
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+@media screen and (max-width: 690px) {
+	.sidenav a {
+		font-size: 50px;
+	}
 }
 
 /* When the screen is short */
