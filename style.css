@@ -277,6 +277,10 @@ li.toggle-btn{
 	margin-left: -60%;
 }
 
+#radio5:checked ~ .first{
+	margin-left: -80%;
+}
+
 /* When the screen is below 690px (small) */
 @media (max-width: 690px) {
 	.navigation-manual{
@@ -326,6 +330,10 @@ li.toggle-btn{
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
+	background: white;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5{
 	background: white;
 }
 /*--Navigation auto end--*/
